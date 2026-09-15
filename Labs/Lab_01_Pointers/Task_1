@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num1=55;
+    int num2=66;
+    int *ptr;
+    ptr=&num1;
+    cout<<"Address stored by pointer: "<<ptr<<endl;
+    cout<<"Value at number 1: "<<*ptr<<endl;
+    ptr=&num2;
+    cout<<"Address stored by pointer: "<<ptr<<endl;
+    cout<<"Value at number 2: "<<*ptr<<endl;
+    return 0;
+}
