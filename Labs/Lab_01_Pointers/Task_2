@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[3]={1, 8, 3};
+    int *ptr=arr;
+    int largest=*ptr;
+    for (int i=1;i<3;i++)
+    {
+        if (*(ptr+i)>largest)
+        {
+            largest=*(ptr+i);
+        }
+    }
+    cout<<"Largest number is "<<largest;
+    return 0;
+}
