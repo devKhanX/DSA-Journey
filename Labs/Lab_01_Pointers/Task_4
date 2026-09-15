@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cout<<"Enter size of array: ";
+    cin>>n;
+    int *arr =new int[n];
+    for (int i=0;i<n;i++)
+    {
+        cout<<"Enter element "<<i+1<<": ";
+        cin>>arr[i];
+    }
+    int min=arr[0];
+    int max=arr[0];
+    for (int i=1;i<n;i++)
+    {
+        if (arr[i]<min)
+        {
+            min=arr[i];
+        }
+        if (arr[i]>max)
+        {
+            max=arr[i];
+        }
+    }
+	cout<<"Minimum is: "<<min<<endl;
+    cout<<"Maximum is: "<<max<<endl;
+    delete[] arr;
+    arr = NULL;
+    return 0;
+}
