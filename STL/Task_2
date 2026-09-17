@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() 
+{
+    vector<int> vec={10, 15, 20, 25, 30, 35, 40};
+    for (auto it=vec.begin();it!=vec.end();)
+    {
+        if (*it%2 == 0) 
+		{
+            it = vec.erase(it); 
+        } else 
+		{
+            ++it; 
+        }
+    }
+    for (auto val:vec) 
+	{
+        cout<<val<<" ";
+    }
+    cout<<endl;
+    return 0;
+}
